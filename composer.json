@@ -1,0 +1,21 @@
+{
+    "name": "ovide/phplibs",
+    "description": "Some of my most used PHP classes.",
+    "authors": [
+        {
+            "name": "Albert Ovide",
+            "email": "albert@ovide.net"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"ovide\\libs\\": "src"
+		}
+	},
+    "require": {
+		"php": ">=5.3"
+	},
+    "require-dev": {
+        "phpunit/phpunit": "4.1.1"
+    }
+}
