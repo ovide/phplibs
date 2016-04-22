@@ -1,4 +1,4 @@
-<?php namespace ovide\libs\lang;
+<?php namespace Ovide\Libs\Lang;
 
 use Exception;
 
@@ -31,7 +31,7 @@ class AutoPropTest extends \PHPUnit_Framework_TestCase
             $foo = $this->o->PrivateWithGetter = 'exception';
         }catch(Exception $e){
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Write property PrivateWithGetter not found at ovide\libs\lang\Dummy';
+            $expected = 'Write property PrivateWithGetter not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
     }
@@ -49,7 +49,7 @@ class AutoPropTest extends \PHPUnit_Framework_TestCase
             $this->o->ProtectedUnderscore = 'exception';
         } catch (Exception $e) {
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Write property ProtectedUnderscore not found at ovide\libs\lang\Dummy';
+            $expected = 'Write property ProtectedUnderscore not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
     }
@@ -67,7 +67,7 @@ class AutoPropTest extends \PHPUnit_Framework_TestCase
             $foo = $this->o->NotFound;
         } catch(Exception $e) {
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Read property NotFound not found at ovide\libs\lang\Dummy';
+            $expected = 'Read property NotFound not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }        
     }
@@ -78,14 +78,14 @@ class AutoPropTest extends \PHPUnit_Framework_TestCase
             $this->o->PrivateSimple = 'exception';
         } catch (Exception $e){
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Write property PrivateSimple not found at ovide\libs\lang\Dummy';
+            $expected = 'Write property PrivateSimple not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
         try {
             $var = $this->o->PrivateSimple;
         } catch(Exception $e) {
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Read property PrivateSimple not found at ovide\libs\lang\Dummy';
+            $expected = 'Read property PrivateSimple not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
     }
@@ -96,14 +96,14 @@ class AutoPropTest extends \PHPUnit_Framework_TestCase
             $var = $this->o->DoubleUnderscore;
         } catch (Exception $e) {
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Read property DoubleUnderscore not found at ovide\libs\lang\Dummy';
+            $expected = 'Read property DoubleUnderscore not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
         try {
             $this->o->DoubleUnderscore = 'exception';
         } catch (Exception $e) {
             $this->assertTrue($e instanceof PropertyException);
-            $expected = 'Write property DoubleUnderscore not found at ovide\libs\lang\Dummy';
+            $expected = 'Write property DoubleUnderscore not found at Ovide\Libs\Lang\Dummy';
             $this->assertEquals($expected, $e->getMessage());
         }
     }

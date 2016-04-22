@@ -9,7 +9,7 @@
     ],
 	"autoload": {
 		"psr-4": {
-			"ovide\\libs\\": "src"
+			"Ovide\\Libs\\": "src"
 		}
 	},
     "require": {

@@ -1,4 +1,4 @@
-<?php namespace ovide\libs\lang;
+<?php namespace Ovide\Libs\Lang;
 
 use ReflectionClass,
     ReflectionMethod,
